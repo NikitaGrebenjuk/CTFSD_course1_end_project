@@ -13,6 +13,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CancelMeetingComponent,
     HomepageComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
