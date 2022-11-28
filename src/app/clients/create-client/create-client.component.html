@@ -1,1 +1,24 @@
-<p>create-client works!</p>
+<div>
+    <h3>Create client</h3>
+    <form [formGroup]="clientCreationForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label" for="name">first name: </label>
+        <input id="name" class="form-control" type="text" formControlName="firstname">
+    </div>
+    <div class="mb-3">
+        <label for="name">surname: </label>
+        <input class="form-control" id="name" type="text" formControlName="surname">
+    </div>
+    <div class="mb-3">
+        <label for="name">email: </label>
+        <input class="form-control" id="name" type="text" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4">clientCreationForm: {{ clientCreationForm.value | json }}
+        </textarea>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">create client</button>
+    </div>
+    </form>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-meetings',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateMeetingsComponent implements OnInit {
 
-  constructor() { }
+  meetingCreationForm;
+
+  constructor(private fb: FormBuilder) {
+    this.meetingCreationForm = fb.group(
+      {
+        day : [""],
+        starttime :[""],
+        endtime: [""],
+        email:[""]
+      }
+    );
+
+
+   }
 
   ngOnInit(): void {
   }
-
+  onSubmit() {
+    console.log(this.meetingCreationForm.value);
+  }
 }

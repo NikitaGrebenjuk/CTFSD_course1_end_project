@@ -18,7 +18,6 @@ const routes: Routes = [
   {path:"showmeetings", component:ShowMeetingsComponent },
   {path:"dashboard", component: DashboardComponent},
   {path:"login", component: LoginComponent},
-
   {path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 

@@ -1,1 +1,28 @@
-<p>create-meetings works!</p>
+<div>
+    <h3>Create meeting</h3>
+    <form [formGroup]="meetingCreationForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label" for="name">Date: </label>
+        <input id="name" class="form-control" type="date" formControlName="day">
+    </div>
+    <div class="mb-3">
+        <label for="name">start time: </label>
+        <input class="form-control" id="name" type="time" formControlName="starttime">
+    </div>
+    <div class="mb-3">
+        <label for="name">end time: </label>
+        <input class="form-control" id="name" type="time" formControlName="endtime">
+    </div>
+    <div class="mb-3">
+        <label for="name">email: </label>
+        <input class="form-control" id="name" type="text" formControlName="email" required="true">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4">meetingCreationForm: {{ meetingCreationForm.value | json }}
+        </textarea>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">create meeting</button>
+    </div>
+    </form>
+</div>
